@@ -142,7 +142,7 @@ class AboutPage extends StatelessWidget {
                 child: Text("Personal", textScaleFactor: 1.2,),
               ),
               Divider(),
-              Text("Lock term Interests"),
+              Text("Long term Interests"),
               buildInterestList(longTermInterests),
               Text("Personal career Goals"),
               buildInterestList(personalCareerGoals),

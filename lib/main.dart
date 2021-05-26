@@ -35,6 +35,7 @@ class HomePage extends StatelessWidget {
     );
 
     return DefaultTabController(
+      initialIndex: 1,
         length: 2,
         child: Scaffold(
           appBar: PreferredSize(
