@@ -1,4 +1,7 @@
+// @dart=2.9
+
 import 'package:cv_website/about.dart';
+import 'package:cv_website/projects.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,15 +29,13 @@ class HomePage extends StatelessWidget {
     TabBar tabBar = TabBar(
       indicatorColor: Theme.of(context).canvasColor,
       tabs: [
-        Tab(text: "Projects",),
         Tab(text: "About",),
-        Tab(icon: Icon(Icons.directions_bike)),
+        Tab(text: "Projects",),
       ],
     );
 
     return DefaultTabController(
-        length: 3,
-        initialIndex: 1,
+        length: 2,
         child: Scaffold(
           appBar: PreferredSize(
             
@@ -46,9 +47,8 @@ class HomePage extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
               AboutPage(),
-              Icon(Icons.directions_bike),
+              ProjectsPage()
             ],
           ),
         ),
