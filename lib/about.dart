@@ -10,7 +10,7 @@ class AboutPage extends StatelessWidget {
     "I like Arduinos/IoT, automation, scripting and playing around with technology."
   ];
 
-  String moreInfo = "I'm currently studying at Belgium Campus for my Bachelors in Computing. I matriculated from Hoërskool Eldoraigne in 2018 where I sang in their chior.\n\nDuring my time in High School I attended a robotics course(XRobotics). This is what got me into embedded computing.\n\nOn the side I do scripting and mobile development for Appsolve to gain work experience and have some money to spend.\n\nI keep myself busy by working on my aquarium, playing with arduinos/IoT and occasionally coding for fun.";
+  String moreInfo = "I'm currently studying at Belgium Campus for my Bachelors in Computing. I matriculated from Hoërskool Eldoraigne in 2018 where I sang in their choir.\n\nDuring my time in High School I attended a robotics course(XRobotics). This is what got me into embedded computing.\n\nOn the side I do scripting and mobile development for Appsolve to gain work experience and have some money to spend.\n\nI keep myself busy by working on my aquarium, playing with Arduinos/IoT and occasionally coding for fun.";
 
   Map<String, double> languagesSkills = {
     "Python" : 0.9,
