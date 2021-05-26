@@ -13,8 +13,9 @@ class Project{
   String imageLink;
   String projectLink;
   String projectLinkCaption;
+  String embedded;
 
-  Project(this.title, this.description, {this.projectLink, this.projectLinkCaption, this.mediaLink, this.imageLink});
+  Project(this.title, this.description, {this.projectLink, this.projectLinkCaption, this.mediaLink, this.imageLink, this.embedded});
 }
 
 
@@ -32,7 +33,7 @@ class ProjectsPage extends StatelessWidget {
 
       Project(
         "2020 Fish Feeder", 
-        "Leaving pets at home over December holiday can be stressful. I grabbed some parts of ThingeyVerse, had them printed and started building. This little device has been faithfully feeding my fish every day at 7am since its completion in December 2020. Technologies used: Raspberry PI; Crontab; Telegram(Send notifaction when fed).", 
+        "Leaving pets at home over December holiday can be stressful. I grabbed some parts of Thingiverse, had them printed and started building. This little device has been faithfully feeding my fish every day at 7am since its completion in December 2020. Technologies used: Raspberry PI; Crontab; Telegram(Send notifaction when fed).", 
         imageLink: "https://i.imgur.com/U5T2YRR.jpg"
       ),
 
@@ -49,6 +50,13 @@ class ProjectsPage extends StatelessWidget {
         projectLink: "https://gitlab.com/NitroFingers/code-game-python",
         projectLinkCaption: "Visit GitLab repo",
         mediaLink: "https://i.giphy.com/media/Xd1LxWao8ECQRCuUev/giphy.mp4"
+      ),
+      Project(
+        "2017 Scikit-learn & arduino number recognition", 
+        "A arduino with touch display that recognises the numbers drawn on it.", 
+        projectLink: "https://www.youtube.com/watch?v=iGPzwzoszac",
+        projectLinkCaption: "View YouTube video",
+        embedded: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/iGPzwzoszac\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
       )
   ];
 
@@ -70,6 +78,14 @@ class ProjectsPage extends StatelessWidget {
                   child: Container(
                     child: project.mediaLink != null ? html.Html(
                       data : "<video src=\"${project.mediaLink}\" controls>"
+                    ) : null
+                  )
+                ),
+                SizedBox(
+                  width: 400,
+                  child: Container(
+                    child: project.embedded != null ? html.Html(
+                      data : project.embedded
                     ) : null
                   )
                 ),

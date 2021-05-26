@@ -2,6 +2,7 @@
 
 import 'package:cv_website/about.dart';
 import 'package:cv_website/projects.dart';
+import 'package:cv_website/socials.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -50,7 +51,7 @@ class HomePage extends StatelessWidget {
             children: [
               ProjectsPage(),
               AboutPage(),
-              Container()
+              SocialsPage()
             ],
           ),
         ),

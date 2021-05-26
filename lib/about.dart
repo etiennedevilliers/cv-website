@@ -10,6 +10,8 @@ class AboutPage extends StatelessWidget {
     "I like Arduinos/IoT, automation, scripting and playing around with technology."
   ];
 
+  String moreInfo = "I'm currently studying at Belgium Campus for my Bachelors in Computing. I matriculated from Hoërskool Eldoraigne in 2018 where I sang in their chior.\n\nDuring my time in High School I attended a robotics course(XRobotics). This is what got me into embedded computing.\n\nOn the side I do scripting and mobile development for Appsolve to gain work experience and have some money to spend.\n\nI keep myself busy by working on my aquarium, playing with arduinos/IoT and occasionally coding for fun.";
+
   Map<String, double> languagesSkills = {
     "Python" : 0.9,
     "Dart" : 0.8,
@@ -40,7 +42,7 @@ class AboutPage extends StatelessWidget {
     "Arduinos & IoT",
     "Aquariums",
     "Chess",
-    "Collect them all: Linux, Mac, Windows"
+    "Collect them all: Linux, macOS, Windows"
   ];
 
   List<String> softSkills = [
@@ -154,6 +156,34 @@ class AboutPage extends StatelessWidget {
     ));
   }
 
+  Widget buildInfo() {
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        maxWidth: 600,
+      ),
+      child: Card(
+        child: Container(
+          margin: EdgeInsets.all(5),
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.all(5),
+                width: double.infinity,
+                child: Text("About", textScaleFactor: 1.2,),
+              ),
+              Divider(),
+              
+              Container(
+                margin: EdgeInsets.all(5),
+                width: double.infinity,
+                child: Text(moreInfo),
+              ),
+            ],
+          ),
+        )
+    ));
+  }
+
   Widget buildSubtitle() {
     return Container(
         width: 500,
@@ -188,6 +218,7 @@ class AboutPage extends StatelessWidget {
           Container(height: 10,),
           buildSubtitle(),
           Container(height: 20,),
+          buildInfo(),
           Wrap(
             children: [
               buildSkills(context),
