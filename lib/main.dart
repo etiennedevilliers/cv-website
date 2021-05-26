@@ -29,17 +29,17 @@ class HomePage extends StatelessWidget {
     TabBar tabBar = TabBar(
       indicatorColor: Theme.of(context).canvasColor,
       tabs: [
-        Tab(text: "About",),
         Tab(text: "Projects",),
+        Tab(text: "About",),
+        Tab(text: "Links & Socials",),
       ],
     );
 
     return DefaultTabController(
       initialIndex: 1,
-        length: 2,
+        length: 3,
         child: Scaffold(
           appBar: PreferredSize(
-            
             preferredSize: Size.copy(tabBar.preferredSize),
             child: Container(
               color: Theme.of(context).primaryColor,
@@ -48,8 +48,9 @@ class HomePage extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
+              ProjectsPage(),
               AboutPage(),
-              ProjectsPage()
+              Container()
             ],
           ),
         ),
