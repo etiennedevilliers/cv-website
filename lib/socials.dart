@@ -8,7 +8,7 @@ class SocialsPage extends StatelessWidget {
         width: 400,
         child: Card(
           child: ListTile(
-            
+            leading: Image.network("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"),
             title: Text("Github Profile"),
             subtitle: Text("etiennefdevilliers"),
             trailing: MaterialButton(
@@ -27,7 +27,7 @@ class SocialsPage extends StatelessWidget {
         width: 400,
         child: Card(
           child: ListTile(
-            
+            leading: Image.asset('images/gitlab-icon-rgb.png'),
             title: Text("Gitlab Profile"),
             subtitle: Text("NitroFingers"),
             trailing: MaterialButton(
@@ -50,6 +50,7 @@ class SocialsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListTile(
+              leading: Icon(Icons.phone),
               title: Text("Contact details")
             ),
             Container(
@@ -77,6 +78,7 @@ class SocialsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListTile(
+              leading: Icon(Icons.phone),
               title: Text("References")
             ),
             Container(
@@ -88,6 +90,37 @@ class SocialsPage extends StatelessWidget {
                 Text("- Appsolve (Pty) Ltd"),
                 Text("  Andre Pelser 083 257 1626"),
                 Text("  Hein Blignaut 082 901 6688"),
+              ],)
+            )
+          ],)
+        )
+    );
+  }
+
+  Widget buildResourceCard() {
+    return Container(
+        width: 400,
+        alignment: Alignment.topLeft,
+        child: Card(
+          child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ListTile(
+              leading: Icon(Icons.download),
+              title: Text("Resources")
+            ),
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.all(15),
+              child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                MaterialButton(
+                  child: Text("Download CV"),
+                  onPressed: () {
+                    js.context.callMethod('open', ["https://drive.google.com/file/d/1ZizElBryPODyeLZRbm5mDuNxU9uB9TnU/view?usp=sharing"]);
+                  }
+                ),
               ],)
             )
           ],)
@@ -109,7 +142,8 @@ class SocialsPage extends StatelessWidget {
             buildGithub(),
             buildGitlab(),
             buildContactsCard(),
-            buildReferences()
+            buildReferences(),
+            buildResourceCard()
           ],
         ),
       ) 
