@@ -25,7 +25,7 @@ class ProjectsPage extends StatelessWidget {
   List<Project> projects = [
       Project(
         "2020 BeBanking mobile app", 
-        "BeBanking is a payment approval service created by Appsolve (Pty) Ltd. I was given the oppertunity to write their mobile iOS & Android app using Flutter. The project came to a conclusion at the end of 2020. This was a great learning oppertunity for me as I had the chance to take a project from design to publishing it the appstore. Technologies include: Flutter, Firebase messanging & REST services", 
+        "BeBanking is a payment approval service created by Appsolve (Pty) Ltd. I was given the opportunity to write their mobile iOS & Android app using Flutter. The project came to a conclusion at the end of 2020. This was a great learning oppertunity for me as I had the chance to take a project from design to publishing it the appstore. Technologies include: Flutter, Firebase messanging & REST services", 
         projectLink: "https://play.google.com/store/apps/details?id=co.za.appsolve.bebanking&hl=en&gl=US",
         projectLinkCaption: "Visit PlayStore page",
         imageLink: "https://i.imgur.com/3qxe5CM.png"
